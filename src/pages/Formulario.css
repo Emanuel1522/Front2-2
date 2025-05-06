@@ -92,6 +92,7 @@
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 1),
     1px 1px 10px rgba(255, 255, 255, 0.6);
   color: #ffffff;
+  width: 150px;
   font-size: 15px;
   font-weight: 500;
   transition: 0.35s;
@@ -132,3 +133,17 @@
 .container #signup_toggle:checked+.form {
   transform: rotateY(-180deg);
 }
+
+/*.btnLista {
+  margin-top: 15px;
+  padding: 10px 35px;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  border-radius: 6px;
+  border: 1px solid #212121;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 1),
+    1px 1px 10px rgba(255, 255, 255, 0.6);
+  color: #000000;
+  font-size: 16px;
+  transition: 0.35s;
+}*/

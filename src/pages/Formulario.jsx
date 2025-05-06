@@ -13,8 +13,9 @@ function Formulario() {
             placeholder="NOMBRE"
           />
           <button type="button" className="btn">
-            Buscar
+            BUSCAR
           </button>
+          <button type="button" className="btn"> VER LISTA </button>
           <span className="switch">
             <label for="signup_toggle" className="signup_tog">
             BUSCAR PROFESOR Aqui
@@ -31,6 +32,7 @@ function Formulario() {
           <button type="button" className="btn">
             Buscar
           </button>
+          <button type="button" className="btn"> VER LISTA </button>
           <span className="switch">
             <label for="signup_toggle" className="signup_tog">
             BUSCAR ESTUDIANTE Aqui

@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 
-const TarjetaUsuario = ({ nombre })=> {
+const TarjetaUsuario = ({ usuario })=> {
+    let redireccion = useNavigate();
     return(
         <div className="contenedorUsuario">
-            <h2 className="nombreUsuario">{nombre}</h2>
-            <button className="btn">VER MAS</button>
+            <h2 className="nombreUsuario">{ usuario.nombre }</h2>
+            <button className="btn" onClick={() => redireccion(`/usuario/${usuario.id}`, { state: usuario })}>VER MAS</button>
         </div>
     )
 }

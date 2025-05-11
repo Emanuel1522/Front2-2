@@ -1,22 +1,29 @@
 import Encabezado from '../componentes/Encabezado'
-import imagen from '../assets/persona.jpg'
+import { useLocation } from "react-router-dom";
 import './Usuario.css'
 
-const Usuario = ({ nombre }) => {
+const Usuario = () => {
+    const location = useLocation();
+    const usuario = location.state || JSON.parse(localStorage.getItem("usuario"));
+
+    if (!usuario) {
+        return <div>Usuario no encontrado</div>;
+    }
+
     return (
         <main>
             <Encabezado />
             <div className="contenedorInformacion">
                 <section>
-                    <h2>{ nombre }</h2>
+                    <h2>{ usuario.nombre }</h2>
                     <div className='imagenContenedor'>
-                        <img src={imagen} alt="Persona"/>
+                    <img src={`/${usuario.imagen}`} alt={usuario.nombre} />
                     </div>
                 </section>
                 <section>
                     <h2>Informacion principal</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet culpa architecto beatae? Architecto numquam saepe veniam amet nisi asperiores autem voluptatem placeat totam officiis debitis inventore, voluptatibus necessitatibus voluptates? Dolore.</p>
-                </section>
+                    <p>{ usuario.info }</p>
+                </section> 
             </div>
         </main>
     )

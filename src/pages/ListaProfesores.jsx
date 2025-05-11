@@ -1,15 +1,23 @@
 import TarjetaUsuario from '../componentes/TarjetaUsuario'
 import Encabezado from '../componentes/Encabezado'
+import { profesores } from "../services/database";
 
 const ListaProfesores = () => {
     return (
         <>
             <Encabezado />
             <div className='contenedorPrincipal'>
-                <TarjetaUsuario nombre="Arturo Calle" />
-                <TarjetaUsuario nombre="Juan Jose de la Cruz" />
-                <TarjetaUsuario nombre="Sebastian Rodriguez" />
-                <TarjetaUsuario nombre="Laura Capacho" />
+                <div>
+                    <h1>PROFESORES</h1>
+                </div>
+                <div className='contenedorLista'>
+                {profesores.map((profesor) => (
+                    <TarjetaUsuario 
+                        key={profesor.id} 
+                        usuario={profesor} 
+                    />
+                ))}
+                </div>
             </div>
         </>
 
